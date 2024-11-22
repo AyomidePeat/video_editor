@@ -39,7 +39,6 @@ class VideoEditorController extends ChangeNotifier {
 
   /// Video from [File].
   final File file;
-  final VideoPlayerOptions? videoPlayerOptions;
   /// Constructs a [VideoEditorController] that edits a video from a file.
   ///
   /// The [file] argument must not be null.
@@ -51,7 +50,7 @@ class VideoEditorController extends ChangeNotifier {
     this.trimThumbnailsQuality = 10,
     this.coverStyle = const CoverSelectionStyle(),
     this.cropStyle = const CropGridStyle(),
-    this.videoPlayerOptions,
+    VideoPlayerOptions? videoPlayerOptions,
     TrimSliderStyle? trimStyle,
   })  : _video = VideoPlayerController.file(
             File(
